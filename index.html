@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="form-container">
+    <div class="form-item">
+        <h2>Client Details</h2>
+        <form id="client_details">
+            <input type="text" class="small-input" name="name" placeholder="First name" required>
+            <input type="text" class="small-input" name="lastName" placeholder="Last name" required>
+            <input type="number" name="phone" placeholder="Phone" required>
+            <input type="email" name="email" placeholder="Email (optional)">
+        </form>
+    </div>
+    <div class="form-item">
+        <h2>Job Details</h2>
+        <form id="job_details">
+            <select name="job_type" class="small-input" required>
+                <option value="job-type" selected disabled >Job Type</option>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="contract">Contract</option>
+            </select>
+            <select name="job_source" required class="small-input">
+                <option value="job-source" selected disabled>Job Source</option>
+                <option value="client">Client</option>
+                <option value="agency">Agency</option>
+            </select>
+            <textarea name="job_description" placeholder="Job description (optional)"></textarea>
+        </form>
+    </div>
+    <div class="form-item">
+        <h2>Service location</h2>
+        <form id="address_details">
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <input type="text"  id="city" name="city" placeholder="City" required>
+            <input type="text" id="state" name="state" placeholder="State" required>
+            <input type="text" id="zip" name="zip" placeholder="Zip" class="small-input" required>
+            <select name="area" class="small-input" required>
+                <option value="area" selected disabled>Area</option>
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+            </select>
+        </form>
+    </div>
+    <div class="form-item">
+        <h2>Schedule</h2>
+        <form id="schedule_details">
+            <input type="date" name="start_date" placeholder="Start date" lang="en" required>
+            <input type="time" name="start_time" placeholder="Start date" class="small-input" required>
+            <input type="time" name="end_time" placeholder="End time" class="small-input" required>
+            <select name="technician" required>
+                <option value="Select technician" selected disabled>Select technician</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </form>
+    </div>
+    <div class="actions">
+        <button id="submit" class="btn btn-create" type="submit" value="Submit">
+            <span id="btn-text">Create Job</span>
+        </button>
+        <button id="save" class="btn" type="submit" value="Submit">Save Info</button>
+    </div>
+
+</div>
+<div id="loader" class="loader"></div>
+<script src="script.js"></script>
+</body>
+</html>
